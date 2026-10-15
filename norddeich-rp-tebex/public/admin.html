@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="de">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#11100e"><title>Admin | Norddeich RP</title><link rel="stylesheet" href="/style.css"></head>
+<body class="admin-body">
+<header class="topbar"><a class="brand" href="/"><span class="brand-mark">N</span><span>NORDDEICH <b>RP</b><small>ADMIN CONSOLE</small></span></a><a class="nav-cta" href="/">Zum Shop <span>↗</span></a></header>
+<main class="admin-main">
+<section class="login-card" id="loginCard"><div class="eyebrow"><i></i> GESCHÜTZTER BEREICH</div><h1>ADMIN <span>LOGIN.</span></h1><p>Bitte melde dich mit deinen Admin-Zugangsdaten an.</p><form id="loginForm"><label>Benutzername<input name="username" autocomplete="username" required></label><label>Passwort<input name="password" type="password" autocomplete="current-password" required></label><button class="button primary" type="submit">Sicher anmelden <span>→</span></button><div id="loginError" class="error" role="alert"></div></form><small class="muted">Zugangsdaten werden nicht im Browser gespeichert.</small></section>
+<section id="dashboard" hidden>
+  <div class="dashboard-head"><div><div class="eyebrow"><i></i> NORDDEICH RP CONTROL</div><h1>SHOP <span>ÜBERSICHT.</span></h1><p>Angemeldet als <b id="adminName">admin</b></p></div><button id="logout" class="button outline">Abmelden</button></div>
+  <div class="stat-grid"><article class="stat"><span>STATUS</span><strong id="connectionStatus">Prüfe…</strong><small>Tebex Headless API</small></article><article class="stat"><span>KATEGORIEN</span><strong id="categoryCount">—</strong><small>Aus deinem Tebex-Shop</small></article><article class="stat"><span>PAKETE</span><strong id="packageCount">—</strong><small>Aktuell sichtbare Pakete</small></article></div>
+  <div class="admin-panel"><div class="panel-head"><div><h2>Tebex-Pakete</h2><p>Die Produktpflege und Preise werden weiterhin in Tebex verwaltet.</p></div><a class="button primary" target="_blank" rel="noopener" href="https://creator.tebex.io/">Tebex Control Panel ↗</a></div><div id="adminStatus" class="status">Lade Shopdaten…</div><div id="adminPackages" class="admin-packages"></div></div>
+  <div class="notice"><b>Hinweis:</b> Dieses Dashboard zeigt die verbundenen Shopdaten. Änderungen an Preisen, Kategorien, Lieferungen und Käufen nimmst du im Tebex Creator Panel vor. Das Headless API bietet nicht dieselben Verwaltungsrechte wie das Creator Panel.</div>
+</section>
+</main>
+<footer><span>© <span id="year"></span> NORDDEICH RP</span><span>Admin-Zugang über serverseitige Session geschützt.</span><a href="/">Zum Shop</a></footer>
+<script src="/admin.js" defer></script>
+</body></html>

@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#111114">
+<title>Norddeich RP | Shop</title>
+<style>
+:root{--bg:#0b0b0e;--panel:#141419;--panel2:#1b1b22;--red:#f02d3a;--red2:#b90e20;--text:#f7f7f8;--muted:#a4a4ad;--line:#2b2b34;--green:#61e6a5}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(ellipse at 80% 0%,#381017 0,transparent 35%),var(--bg);color:var(--text);font:15px/1.55 Inter,system-ui,Segoe UI,Arial,sans-serif}button,input{font:inherit}button,a{transition:.2s}a{color:inherit;text-decoration:none}.wrap{width:min(1160px,92%);margin:auto}
+.topbar{background:#08080a;border-bottom:1px solid var(--line);font-size:12px;color:var(--muted);padding:8px 0}.topbar .wrap{display:flex;justify-content:space-between;gap:12px}
+header{position:sticky;top:0;z-index:20;background:#0c0c0fea;backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}.nav{height:76px;display:flex;align-items:center;justify-content:space-between;gap:20px}.brand{display:flex;align-items:center;gap:12px;font-weight:900;letter-spacing:.4px}.logo{width:42px;height:42px;display:grid;place-items:center;background:linear-gradient(145deg,var(--red),#790b17);clip-path:polygon(18% 0,100% 0,82% 100%,0 100%);font-weight:1000;font-style:italic}.brand small{display:block;color:var(--muted);font-size:10px;letter-spacing:2px}.links{display:flex;gap:24px;color:#d5d5da;font-size:13px}.links a:hover{color:#ff5964}.cartbtn,.btn{border:0;border-radius:9px;padding:12px 16px;font-weight:800;cursor:pointer}.cartbtn{background:var(--panel2);border:1px solid var(--line);color:white}.cartbtn span{display:inline-grid;place-items:center;background:var(--red);width:22px;height:22px;border-radius:6px;margin-left:8px}
+.hero{padding:76px 0 60px;min-height:410px;display:flex;align-items:center;position:relative;overflow:hidden}.hero:after{content:"N";position:absolute;right:4%;top:-95px;font-size:440px;font-weight:1000;font-style:italic;color:#ffffff05;pointer-events:none}.eyebrow{color:#ff626c;font-size:11px;letter-spacing:3px;font-weight:900;text-transform:uppercase}.hero h1{font-size:clamp(42px,7vw,78px);line-height:.98;letter-spacing:-3px;margin:16px 0 20px;max-width:760px}.hero h1 em{font-style:normal;color:var(--red)}.hero p{max-width:560px;color:#b7b7c0;font-size:16px}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}.btn-primary{background:linear-gradient(120deg,var(--red),var(--red2));color:white;box-shadow:0 8px 28px #f02d3a30}.btn-primary:hover{transform:translateY(-2px);filter:brightness(1.1)}.btn-ghost{background:#17171d;border:1px solid #34343e;color:white}.trust{display:flex;gap:22px;flex-wrap:wrap;margin-top:32px;color:#bdbdc5;font-size:12px}.trust b{color:white}
+.section{padding:42px 0 70px}.section-head{display:flex;align-items:end;justify-content:space-between;gap:20px;margin-bottom:24px}.section h2{font-size:30px;letter-spacing:-1px;margin:6px 0}.section-head p{color:var(--muted);margin:0}.filters{display:flex;gap:8px;flex-wrap:wrap;margin:24px 0}.filter{border:1px solid var(--line);background:var(--panel);color:#c9c9d0;border-radius:8px;padding:9px 14px;cursor:pointer}.filter.active,.filter:hover{background:#3a1016;border-color:#9c202b;color:white}.search{margin-left:auto;min-width:190px;max-width:280px;width:100%;border:1px solid var(--line);background:var(--panel);color:white;border-radius:8px;padding:10px 12px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.product{background:linear-gradient(160deg,#19191f,#111115);border:1px solid var(--line);border-radius:14px;overflow:hidden;display:flex;flex-direction:column;min-width:0}.product:hover{border-color:#71313a;transform:translateY(-3px)}.product-art{height:150px;display:grid;place-items:center;background:radial-gradient(circle at 50% 65%,#63202a 0,transparent 48%),linear-gradient(135deg,#1b1b22,#101014);position:relative}.product-art .symbol{font-size:54px;filter:drop-shadow(0 8px 12px #0009)}.tag{position:absolute;top:12px;left:12px;font-size:10px;letter-spacing:1px;font-weight:900;background:#2c1116;color:#ff7b84;border:1px solid #61212b;border-radius:5px;padding:5px 7px}.product-body{padding:17px;display:flex;flex-direction:column;flex:1}.product-body h3{margin:0 0 7px;font-size:17px}.product-body p{color:var(--muted);font-size:13px;margin:0 0 18px;flex:1}.product-bottom{display:flex;align-items:center;justify-content:space-between;gap:10px}.price{font-weight:900;font-size:20px}.price small{display:block;font-size:10px;color:var(--muted);font-weight:500}.add{background:var(--red);color:white;border:0;border-radius:7px;padding:10px 12px;font-size:12px;font-weight:900;cursor:pointer}.add:hover{background:#ff4c58}
+.benefits{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:26px}.benefit{border:1px solid var(--line);background:#121216;padding:20px;border-radius:12px}.benefit .ico{font-size:23px}.benefit h3{font-size:14px;margin:10px 0 5px}.benefit p{font-size:12px;color:var(--muted);margin:0}
+.notice{border:1px solid #5e252d;background:#1b0f12;padding:18px;border-radius:10px;color:#d7b9bc;font-size:12px;margin-top:28px}.notice b{color:white}
+footer{border-top:1px solid var(--line);padding:28px 0;color:var(--muted);font-size:12px}.foot{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap}
+.overlay{position:fixed;inset:0;background:#000a;z-index:40;display:none}.overlay.show{display:block}.drawer{position:absolute;right:0;top:0;height:100%;width:min(440px,100%);background:#111115;border-left:1px solid var(--line);padding:24px;display:flex;flex-direction:column}.drawer-head{display:flex;justify-content:space-between;align-items:center}.drawer h2{margin:0}.close{border:1px solid var(--line);background:#202027;color:white;border-radius:8px;padding:8px 11px;cursor:pointer}.cart-items{overflow:auto;flex:1;margin:22px 0}.cart-item{display:flex;justify-content:space-between;gap:12px;padding:14px 0;border-bottom:1px solid var(--line)}.cart-item small{display:block;color:var(--muted)}.remove{background:none;color:#ff727b;border:0;cursor:pointer}.cart-total{border-top:1px solid var(--line);padding-top:18px}.total-line{display:flex;justify-content:space-between;font-size:18px;font-weight:900;margin-bottom:16px}.checkout{width:100%}.empty{color:var(--muted);text-align:center;padding:45px 10px}.toast{position:fixed;bottom:22px;left:50%;transform:translate(-50%,20px);opacity:0;pointer-events:none;background:#202027;border:1px solid #45454e;border-radius:9px;padding:12px 18px;z-index:60;transition:.25s}.toast.show{opacity:1;transform:translate(-50%,0)}
+@media(max-width:800px){.links{display:none}.grid{grid-template-columns:repeat(2,1fr)}.hero{padding:56px 0}.benefits{grid-template-columns:1fr}.section-head{align-items:start;flex-direction:column}.search{margin-left:0;max-width:none}}
+@media(max-width:520px){.grid{grid-template-columns:1fr}.hero h1{letter-spacing:-2px}.topbar .wrap{font-size:10px}.nav{height:66px}.product-art{height:135px}.trust{gap:12px}}
+</style>
+</head>
+<body>
+<div class="topbar"><div class="wrap"><span>● <b style="color:#61e6a5">SHOP ONLINE</b> · Norddeich RP</span><span>Digitaler Shop für unsere Community</span></div></div>
+<header><div class="wrap nav">
+<a class="brand" href="#"><span class="logo">N</span><span>NORDDEICH <small>ROLEPLAY · OFFICIAL STORE</small></span></a>
+<nav class="links"><a href="#shop">Shop</a><a href="#vorteile">Vorteile</a><a href="#info">Informationen</a></nav>
+<button class="cartbtn" id="openCart">Warenkorb <span id="cartCount">0</span></button>
+</div></header>
+<main>
+<section class="hero"><div class="wrap">
+<div class="eyebrow">Deine Stadt. Deine Geschichte.</div>
+<h1>LEVEL UP.<br><em>LEBE DEIN RP.</em></h1>
+<p>Willkommen im offiziellen Norddeich RP Shop. Entdecke ausgewählte Fahrzeuge, VIP-Vorteile, Geldpakete und Fraktionsangebote für dein nächstes Kapitel.</p>
+<div class="actions"><a class="btn btn-primary" href="#shop">SHOP ENTDECKEN ↗</a><a class="btn btn-ghost" href="#info">MEHR ERFAHREN</a></div>
+<div class="trust"><span>✓ <b>Schneller Support</b></span><span>✓ <b>Sichere Zahlung über Tebex</b></span><span>✓ <b>Für Norddeich RP</b></span></div>
+</div></section>
+<section class="section" id="shop"><div class="wrap">
+<div class="section-head"><div><div class="eyebrow">OFFICIAL STORE</div><h2>Finde dein Upgrade.</h2><p>Wähle ein Produkt und lege es in deinen Warenkorb.</p></div></div>
+<div class="filters" id="filters"><button class="filter active" data-cat="Alle">Alle Produkte</button><button class="filter" data-cat="Fahrzeuge">Fahrzeuge</button><button class="filter" data-cat="Geldpakete">Geldpakete</button><button class="filter" data-cat="Ränge & VIP">Ränge & VIP</button><button class="filter" data-cat="Fraktionen">Fraktionen</button><input id="search" class="search" placeholder="Produkt suchen …" aria-label="Produkt suchen"></div>
+<div class="grid" id="productGrid"></div>
+<div class="notice"><b>Hinweis:</b> Die angezeigten Produkte und Preise sind Demo-Inhalte. Vor dem Livegang bitte echte Tebex-Pakete, Preise und Checkout-Links eintragen. Käufe schalten ohne Tebex-Anbindung nichts im Spiel frei.</div>
+</div></section>
+<section class="section" id="vorteile" style="background:#0e0e12;border-top:1px solid #24242b;border-bottom:1px solid #24242b"><div class="wrap">
+<div class="eyebrow">WARUM NORDDEICH?</div><h2>Shoppen mit Überblick.</h2>
+<div class="benefits"><div class="benefit"><div class="ico">⚡</div><h3>Einfach & übersichtlich</h3><p>Finde schnell die passende Kategorie und behalte deinen Warenkorb im Blick.</p></div><div class="benefit"><div class="ico">🛡️</div><h3>Checkout über Tebex</h3><p>Im Live-Shop werden Zahlungsabwicklung und Bestellungen über deine Tebex-Store-Seite erledigt.</p></div><div class="benefit"><div class="ico">🎧</div><h3>Community-Support</h3><p>Bei Fragen zu Paketen, Lieferung oder Regeln wende dich an das offizielle Serverteam.</p></div></div>
+</div></section>
+<section class="section" id="info"><div class="wrap"><div class="eyebrow">VOR DEM KAUF</div><h2>Wichtige Informationen</h2><p style="color:var(--muted);max-width:780px">Bitte lies vor dem Kauf die Regeln des Servers sowie die geltenden Tebex-Kaufbedingungen. Virtuelle Produkte sind serverbezogen und können von Spielregeln, Verfügbarkeit und technischen Voraussetzungen abhängen. Ersetze diesen Abschnitt vor Veröffentlichung durch deine gültigen AGB, Datenschutzinformationen, Impressum, Rückerstattungsregeln und Support-Kontakt.</p></div></section>
+</main>
+<footer><div class="wrap foot"><span>© <span id="year"></span> Norddeich RP · Fan-/Community-Shop</span><span><a href="#info">Impressum</a>　·　<a href="#info">Datenschutz</a>　·　<a href="#info">Regeln</a></span></div></footer>
+<div class="overlay" id="overlay" role="dialog" aria-modal="true" aria-label="Warenkorb"><aside class="drawer"><div class="drawer-head"><h2>Dein Warenkorb</h2><button class="close" id="closeCart" aria-label="Warenkorb schließen">✕</button></div><div class="cart-items" id="cartItems"></div><div class="cart-total"><div class="total-line"><span>Zwischensumme</span><span id="cartTotal">0,00 €</span></div><button class="btn btn-primary checkout" id="checkout">WEITER ZU TEBEX ↗</button><p style="font-size:11px;color:var(--muted)">Demo-Warenkorb. Der Checkout wird erst nach Eintragung deiner echten Tebex-Paket-Links aktiviert.</p></div></aside></div>
+<div class="toast" id="toast" role="status"></div>
+<script>
+/* DEMO-DATEN: vor Veröffentlichung durch echte Tebex-Pakete ersetzen. */
+const products=[
+{id:'car1',name:'Sportwagen-Paket',cat:'Fahrzeuge',price:14.99,icon:'🏎️',tag:'FAHRZEUGE',desc:'Ein Beispielpaket für ein exklusives Fahrzeug.'},
+{id:'car2',name:'Premium Fahrzeug',cat:'Fahrzeuge',price:24.99,icon:'🚘',tag:'BELIEBT',desc:'Demo-Angebot für ein besonderes Fahrzeug.'},
+{id:'cash1',name:'Startkapital',cat:'Geldpakete',price:4.99,icon:'💵',tag:'GELDPAKET',desc:'Beispiel für ein kleines Ingame-Geldpaket.'},
+{id:'cash2',name:'Business-Kapital',cat:'Geldpakete',price:9.99,icon:'💰',tag:'GELDPAKET',desc:'Demo-Paket für den Start in dein Business.'},
+{id:'vip1',name:'VIP Bronze',cat:'Ränge & VIP',price:7.99,icon:'🥉',tag:'VIP RANG',desc:'Beispiel für einen zeitlich begrenzten VIP-Rang.'},
+{id:'vip2',name:'VIP Elite',cat:'Ränge & VIP',price:19.99,icon:'👑',tag:'PREMIUM',desc:'Demo-Paket für einen höherwertigen Rang.'},
+{id:'fac1',name:'Fraktions-Paket',cat:'Fraktionen',price:12.99,icon:'🛡️',tag:'FRAKTION',desc:'Beispielpaket für freigegebene Fraktionsinhalte.'},
+{id:'fac2',name:'Fraktions-Upgrade',cat:'Fraktionen',price:17.99,icon:'⭐',tag:'UPGRADE',desc:'Demo-Upgrade für eine berechtigte Fraktion.'},
+{id:'vip3',name:'VIP Plus',cat:'Ränge & VIP',price:12.99,icon:'🔥',tag:'VIP RANG',desc:'Ein weiteres Beispiel für einen VIP-Rang.'}
+];
+let activeCat='Alle',cart=[];
+const euro=n=>new Intl.NumberFormat('de-DE',{style:'currency',currency:'EUR'}).format(n);
+const grid=document.getElementById('productGrid');
+function renderProducts(){
+ const q=document.getElementById('search').value.trim().toLowerCase();
+ const list=products.filter(p=>(activeCat==='Alle'||p.cat===activeCat)&&(`${p.name} ${p.cat} ${p.desc}`).toLowerCase().includes(q));
+ grid.innerHTML=list.map(p=>`<article class="product"><div class="product-art"><span class="tag">${p.tag}</span><span class="symbol" aria-hidden="true">${p.icon}</span></div><div class="product-body"><h3>${p.name}</h3><p>${p.desc}</p><div class="product-bottom"><div class="price">${euro(p.price)}<small>Einmalige Zahlung · Demo</small></div><button class="add" data-add="${p.id}">HINZUFÜGEN +</button></div></div></article>`).join('')||'<p style="color:var(--muted)">Keine Produkte gefunden.</p>';
+ grid.querySelectorAll('[data-add]').forEach(b=>b.addEventListener('click',()=>addToCart(b.dataset.add)));
+}
+function addToCart(id){const p=products.find(x=>x.id===id);const item=cart.find(x=>x.id===id);if(item)item.qty++;else cart.push({...p,qty:1});renderCart();toast(`${p.name} hinzugefügt`)}
+function renderCart(){
+ document.getElementById('cartCount').textContent=cart.reduce((s,p)=>s+p.qty,0);
+ document.getElementById('cartTotal').textContent=euro(cart.reduce((s,p)=>s+p.price*p.qty,0));
+ const el=document.getElementById('cartItems');
+ el.innerHTML=cart.length?cart.map(p=>`<div class="cart-item"><div><b>${p.name}</b><small>${p.qty} × ${euro(p.price)}</small><small>${p.cat}</small></div><div style="text-align:right"><b>${euro(p.price*p.qty)}</b><br><button class="remove" data-remove="${p.id}">Entfernen</button></div></div>`).join(''):'<div class="empty">Dein Warenkorb ist noch leer.</div>';
+ el.querySelectorAll('[data-remove]').forEach(b=>b.addEventListener('click',()=>{cart=cart.filter(p=>p.id!==b.dataset.remove);renderCart()}));
+}
+const overlay=document.getElementById('overlay');
+document.getElementById('openCart').onclick=()=>overlay.classList.add('show');
+document.getElementById('closeCart').onclick=()=>overlay.classList.remove('show');
+overlay.addEventListener('click',e=>{if(e.target===overlay)overlay.classList.remove('show')});
+document.addEventListener('keydown',e=>{if(e.key==='Escape')overlay.classList.remove('show')});
+document.getElementById('filters').querySelectorAll('[data-cat]').forEach(b=>b.onclick=()=>{activeCat=b.dataset.cat;document.querySelectorAll('.filter').forEach(x=>x.classList.toggle('active',x===b));renderProducts()});
+document.getElementById('search').addEventListener('input',renderProducts);
+document.getElementById('checkout').onclick=()=>toast(cart.length?'Bitte zuerst echte Tebex-Paket-Links konfigurieren. Demo-Checkout ist deaktiviert.':'Dein Warenkorb ist leer.');
+let toastTimer;function toast(msg){const el=document.getElementById('toast');el.textContent=msg;el.classList.add('show');clearTimeout(toastTimer);toastTimer=setTimeout(()=>el.classList.remove('show'),2600)}
+document.getElementById('year').textContent=new Date().getFullYear();renderProducts();renderCart();
+</script>
+</body></html>
